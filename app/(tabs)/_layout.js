@@ -1,15 +1,8 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-
-import { HapticTab } from '@/components/haptic-tab';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
-import { LayoutDashboard, DollarSign, ArrowLeftRight, FileSearch } from 'lucide-react';
+import Icon from 'react-native-vector-icons/Feather';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-  const colors = Colors[colorScheme ?? 'light'];
-
   return (
     <Tabs
       screenOptions={{
@@ -35,34 +28,33 @@ export default function TabLayout() {
           fontWeight: '600',
         },
         headerShown: true,
-        tabBarButton: HapticTab,
       }}>
       <Tabs.Screen
         name="index"
         options={{
           title: 'Dashboard',
-          tabBarIcon: ({ color }) => <LayoutDashboard size={24} color={color} />,
+          tabBarIcon: ({ color }) => <Icon name="layout" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="budget"
         options={{
           title: 'Budget',
-          tabBarIcon: ({ color }) => <DollarSign size={24} color={color} />,
+          tabBarIcon: ({ color }) => <Icon name="dollar-sign" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="transactions"
         options={{
           title: 'Transactions',
-          tabBarIcon: ({ color }) => <ArrowLeftRight size={24} color={color} />,
+          tabBarIcon: ({ color }) => <Icon name="repeat" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="audits"
         options={{
           title: 'Audits',
-          tabBarIcon: ({ color }) => <FileSearch size={24} color={color} />,
+          tabBarIcon: ({ color }) => <Icon name="file-text" size={24} color={color} />,
         }}
       />
     </Tabs>
