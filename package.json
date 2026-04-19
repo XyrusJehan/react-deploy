@@ -2,15 +2,13 @@
   "name": "skcoa",
   "main": "expo-router/entry",
   "version": "1.0.0",
-  "scripts": {
-    "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "lint": "expo lint",
-    "vercel-build": "expo export"
-  },
+"scripts": {
+  "start": "expo start",
+  "android": "expo start --android",
+  "ios": "expo start --ios",
+  "web": "expo start --web",
+  "build": "expo export"
+},
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
     "@fontsource-variable/geist": "^5.2.8",
