@@ -1,41 +1,84 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * COA SK Oversight App - Official Government Color Palette
+ * Based on Philippine Commission on Audit official colors
  */
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+// Official Government Palette
+const primaryNavy = '#1e3a5f';
+const primaryGold = '#d4a84b';
+const accentTeal = '#0891b2';
 
+// Light theme
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    text: '#1e293b',
+    background: '#ffffff',
+    tint: primaryNavy,
+    icon: '#64748b',
+    tabIconDefault: '#94a3b8',
+    tabIconSelected: primaryNavy,
+    // Custom palette
+    primary: primaryNavy,
+    secondary: '#334155',
+    accent: primaryGold,
+    success: '#059669',
+    warning: '#d97706',
+    destructive: '#dc2626',
+    border: '#e2e8f0',
+    muted: '#f1f5f9',
+    mutedForeground: '#64748b',
+    card: '#ffffff',
+    cardForeground: '#1e293b',
+    input: '#e2e8f0',
+    ring: primaryNavy,
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    text: '#f8fafc',
+    background: '#0f172a',
+    tint: primaryGold,
+    icon: '#94a3b8',
+    tabIconDefault: '#64748b',
+    tabIconSelected: primaryGold,
+    // Custom palette
+    primary: primaryGold,
+    secondary: '#cbd5e1',
+    accent: primaryNavy,
+    success: '#10b981',
+    warning: '#fbbf24',
+    destructive: '#ef4444',
+    border: '#334155',
+    muted: '#1e293b',
+    mutedForeground: '#94a3b8',
+    card: '#1e293b',
+    cardForeground: '#f8fafc',
+    input: '#334155',
+    ring: primaryGold,
   },
+};
+
+// COA Brand Colors
+export const COAColors = {
+  navy: primaryNavy,
+  gold: primaryGold,
+  teal: accentTeal,
+  // Status colors
+  compliant: '#059669',
+  underReview: '#d97706',
+  nonCompliant: '#dc2626',
+  pending: '#64748b',
+  // Severity colors
+  critical: '#dc2626',
+  major: '#ea580c',
+  minor: '#ca8a04',
 };
 
 export const Fonts = Platform.select({
   ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
     sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
     serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
     rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
     mono: 'ui-monospace',
   },
   default: {

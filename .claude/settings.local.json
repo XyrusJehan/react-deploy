@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx expo *)",
+      "Bash(npx shadcn@latest add tabs sheet -y)"
+    ]
+  }
+}
